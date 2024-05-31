@@ -268,7 +268,6 @@ nav a {
     transition: .5s;
 }
 
-/* Efeito de hover para links */
 nav a:hover {
     color: var(--texto-destaque);
 }
@@ -310,7 +309,6 @@ nav a:hover {
     margin-top: 3rem;
 }
 
-/* Efeito de hover para redes sociais */
 #social a:hover {
     box-shadow: #fff 0px 0px 10px;
 }
@@ -402,6 +400,29 @@ nav a:hover {
     }
 }
 
+@media screen and (max-width: 480px) {
+    #firstLayer {
+        align-items: center;
+        justify-content: center;
+        padding: 1rem;
+    }
+
+    #firstLayer h1 {
+        font-size: 4rem;
+        text-align: center;
+    }
+
+    #skills {
+        grid-template-columns: 1fr;
+    }
+
+    #thirdLayer {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+}
+
 @media screen and (max-width: 1024px) {
     #firstLayer {
         align-items: center;
@@ -409,7 +430,7 @@ nav a:hover {
     }
 
     #firstLayer h1 {
-        font-size: 10rem;
+        font-size: 6rem;
     }
 
     #thirdLayer {
@@ -427,7 +448,7 @@ nav a:hover {
     }
 
     #firstLayer h1 {
-        font-size: 10rem;
+        font-size: 8rem;
     }
 
     #skills {
