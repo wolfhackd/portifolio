@@ -1,5 +1,5 @@
 /* Cores principais */
-/* :root {
+:root {
     --cor-fundo:#003049;
     --header:#002133;
     --texto-destaque:#FCBF49;
@@ -157,7 +157,32 @@ nav a {
     padding: 1rem;
 }
 
-@media screen and (min-width: 481px) and (max-width: 768px) {
+@media screen and (min-width: 320px) and (max-width: 480px) {
+    header {
+        flex-direction: column;
+        /* Nem sei como esse width none pegou kkkkkk */
+        width: none;
+    }
+
+    #firstLayer h1 {
+        font-size: 3rem !important;
+        text-align: center;
+    }
+
+    #skills {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+    }
+
+    #thirdLayer {
+    display: flex !important;
+    flex-direction: column !important;
+    margin: auto !important;
+    }
+}
+
+@media screen and (max-width: 768px) {
    #firstLayer h1 {
     align-self: flex-start;
     font-size: 8rem;
@@ -183,7 +208,7 @@ nav a {
     }
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (min-width: 1025px) and (max-width: 1200px) {
     #firstLayer {
         align-items: center;
         justify-content: center;
@@ -195,7 +220,6 @@ nav a {
 
     #skills {
         grid-template-columns: 1fr 1fr 1fr;
-        /* grid-template-rows: repeat(1fr 1fr);
     }
 
     #thirdLayer {
@@ -228,240 +252,5 @@ nav a {
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: repeat(1fr 1fr 1fr);
         gap: 1rem;
-    }
-} */
-
-/* Cores principais */
-:root {
-    --cor-fundo: #003049;
-    --header: #002133;
-    --texto-destaque: #FCBF49;
-    --texto-alt: #9c9c9c;
-    --texto: #fff;
-}
-
-header {
-    background-color: var(--header);
-    color: var(--texto);
-    border-bottom: 1px solid var(--texto-destaque);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1rem;
-    transition: height 1s;
-    position: fixed;
-    width: 100vw;
-}
-
-header span {
-    color: var(--texto-destaque);
-}
-
-nav {
-    display: flex;
-    gap: 1rem;
-}
-
-nav a {
-    color: var(--texto);
-    text-decoration: none;
-    transition: .5s;
-}
-
-nav a:hover {
-    color: var(--texto-destaque);
-}
-
-#firstLayer {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    background-image: url(./src/back.jpg);
-    background-size: cover;
-    color: var(--texto);
-    padding: 1rem;
-}
-
-#firstLayer span {
-    color: var(--texto-destaque);
-}
-
-#firstLayer h1 {
-    align-self: flex-start;
-    font-size: 3rem;
-    margin-top: 5rem;
-}
-
-#firstLayer p {
-    font-weight: 600;
-    text-align: center;  
-}
-
-#social {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-}
-
-#social a {
-    border: 1px solid var(--texto-alt);
-    border-radius: 3rem;
-    padding: .8rem;
-    margin-top: 3rem;
-}
-
-#social a:hover {
-    box-shadow: #fff 0px 0px 10px;
-}
-
-#secondLayer {
-    background-color: var(--cor-fundo);
-    color: var(--texto);
-    padding: 1rem;
-}
-
-#secondLayer h3 {
-    text-align: center;
-    padding-top: 1rem;
-}
-
-#secondLayer p {
-    text-align: justify;
-    margin: 2rem;
-    font-weight: 600;
-}
-
-#skills {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1rem;
-    padding: 1rem;
-}
-
-.skill {
-    background-color: var(--header);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    min-height: 10rem;
-    padding: 0.5rem;
-}
-
-.skill img {
-    width: 2rem;
-    height: 2rem;
-}
-
-.skill p {
-    text-align: left;
-    overflow-y: scroll;
-}
-
-#thirdLayer {
-    background-color: var(--cor-fundo);
-    width: 100vw;
-    padding: 1rem;
-}
-
-#thirdLayer a {
-    color: var(--header);
-    text-decoration: none;
-}
-
-.projects {
-    background-color: var(--texto-destaque);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 1rem;
-    word-break: break-all;
-}
-
-.projects img {
-    height: 5rem;
-}
-
-.projects h3 {
-    color: var(--texto-alt);
-    text-align: justify;
-    padding: 1rem;
-}
-
-/* Responsividade */
-@media screen and (max-width: 480px) {
-    header {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    nav {
-        flex-direction: column;
-        gap: 0.5rem;
-    }
-
-    #firstLayer h1 {
-        font-size: 2rem;
-        margin-top: 5rem;
-    }
-
-    #firstLayer p {
-        font-size: 1rem;
-    }
-
-    #skills {
-        grid-template-columns: 1fr;
-    }
-
-    .skill {
-        min-height: 12rem;
-    }
-
-    #thirdLayer {
-        grid-template-columns: 1fr;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    #firstLayer h1 {
-        font-size: 4rem;
-        margin-top: 7rem;
-    }
-
-    #skills {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    #thirdLayer {
-        grid-template-columns: 1fr 1fr;
-    }
-}
-
-@media screen and (max-width: 1024px) {
-    #firstLayer h1 {
-        font-size: 5rem;
-    }
-
-    #skills {
-        grid-template-columns: 1fr 1fr 1fr;
-    }
-
-    #thirdLayer {
-        grid-template-columns: 1fr 1fr 1fr;
-    }
-}
-
-@media screen and (min-width: 1201px) {
-    #firstLayer h1 {
-        font-size: 6rem;
-    }
-
-    #skills {
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-    }
-
-    #thirdLayer {
-        grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 }
